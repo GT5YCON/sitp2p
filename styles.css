@@ -1,0 +1,198 @@
+/* Reset e fonte padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Fonte moderna e estilosa */
+}
+
+/* Corpo da página */
+body {
+    background: linear-gradient(135deg, #1f1c2c, #928dab); /* Degradê elegante de tons escuros */
+    color: #f8f9fa; /* Texto claro para contraste */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Barra de navegação */
+.navbar {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar a {
+    color: #f8f9fa; /* Texto claro */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar a:hover {
+    background-color: #6a11cb; /* Cor vibrante ao passar o mouse */
+    transform: scale(1.1); /* Aumenta levemente ao passar o mouse */
+}
+
+/* Cabeçalho */
+.header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #f8f9fa;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.logo {
+    width: 80px; /* Tamanho ideal para a logo */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.site-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+/* Efeito hover na logo */
+.logo:hover {
+    transform: scale(1.1) rotate(5deg); /* Cresce e gira levemente */
+}
+
+/* Container principal */
+.container {
+    width: 100%;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo semi-transparente */
+    backdrop-filter: blur(15px); /* Desfoque para efeito de vidro */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #fff; /* Mantém o texto branco */
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Títulos */
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #f8f9fa;
+}
+
+/* Labels */
+label {
+    font-size: 16px;
+    text-align: left;
+    display: block;
+    margin-top: 20px;
+    color: #f8f9fa;
+}
+
+/* Inputs e Selects */
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Bordas claras */
+    border-radius: 8px;
+    font-size: 14px;
+    background: #d3d3d3; /* Cinza claro */
+    color: #333; /* Texto preto */
+    transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 8px rgba(106, 17, 203, 0.5);
+    outline: none;
+}
+
+/* Botões */
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Degradê bonito */
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(106, 17, 203, 0.5); /* Efeito de sombra */
+}
+
+/* Informações de preços */
+.crypto-price-info {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 8px;
+    color: #f8f9fa; /* Texto claro */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.crypto-price-info p {
+    font-size: 14px;
+}
+
+/* Mensagens de erro */
+.error-message {
+    color: #fff;
+    background: #e74c3c; /* Vermelho vibrante */
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

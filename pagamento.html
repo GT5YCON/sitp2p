@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OwlP2P - Finalizar Compra</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo OwlP2P" class="logo">
+            <span class="site-title">OwlP2P</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Finalizar Compra</h2>
+
+        <!-- Informações da compra -->
+        <p><strong>Criptomoeda:</strong> <span id="cryptoChoice"></span></p>
+        <p><strong>Valor em Reais:</strong> R$ <span id="fiatAmount"></span></p>
+        <p><strong>Quantidade de Criptomoeda:</strong> <span id="cryptoAmount"></span></p>
+
+        <!-- Formulário para pagamento -->
+        <label for="paymentMethod">Forma de pagamento:</label>
+        <select id="paymentMethod">
+            <option value="boleto">Boleto</option>
+            <option value="deposito">Depósito Bancário</option>
+            <option value="pix">Pix</option>
+        </select>
+
+        <label for="blockchainNetwork">Rede Blockchain:</label>
+        <select id="blockchainNetwork"></select>
+
+        <button class="btn-primary" onclick="confirmPurchase()">Confirmar Compra</button>
+    </div>
+
+    <script src="payment.js"></script>
+</body>
+</html>

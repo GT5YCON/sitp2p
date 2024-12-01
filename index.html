@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OwlP2P - Calculadora de Criptomoedas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de navegação -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="taxa.html">Taxa</a></li>
+            <li><a href="termos.html">Termos</a></li>
+        </ul>
+    </nav>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo OwlP2P" class="logo">
+            <span class="site-title">OwlP2P</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Escolha de Pagamento</h2>
+
+        <!-- Escolha da criptomoeda -->
+        <label for="cryptoType">Criptomoeda:</label>
+        <select id="cryptoType" onchange="calculateCryptoAmount()">
+            <option value="bitcoin">Bitcoin (BTC)</option>
+            <option value="usdt">USDT</option>
+        </select>
+
+        <!-- Entrada para o valor em reais -->
+        <label for="fiatAmount">Valor em Reais:</label>
+        <input type="number" id="fiatAmount" oninput="calculateCryptoAmount()" placeholder="Digite o valor em reais">
+
+        <!-- Mostrar a quantidade de criptomoeda -->
+        <label for="cryptoAmount">Quantidade de Criptomoeda:</label>
+        <input type="text" id="cryptoAmount" readonly>
+
+        <!-- Exibir cotações -->
+        <div class="crypto-price-info">
+            <p><strong>Bitcoin (BTC):</strong> R$<span id="btcPrice">0.00</span></p>
+            <p><strong>Tether (USDT):</strong> R$<span id="usdtPrice">0.00</span></p>
+        </div>
+
+        <!-- Botão para pagamento -->
+        <button class="btn-primary" onclick="goToPaymentPage()">Ir para o Pagamento</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
